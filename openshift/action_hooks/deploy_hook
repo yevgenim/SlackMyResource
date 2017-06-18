@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Do stuff you need to do before original run script.
+
+# Run the original run script.
+
+#exec $S2I_SCRIPTS_PATH/run
+
+npm install npm@latest -g
+npm init -f -y
+npm install @slack/client --save
