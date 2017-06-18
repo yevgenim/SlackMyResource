@@ -105,3 +105,9 @@ app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
 
 module.exports = app ;
+
+var HerrKonyo = require('@slack/client').IncomingWebhook;
+var url = process.env.SLACK_WEBHOOK_URL || '';
+var wh = new HerrKonyo("https://hooks.slack.com/services/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");
+
+wh.send('Hello World');
