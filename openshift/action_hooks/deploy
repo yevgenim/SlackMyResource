@@ -5,9 +5,9 @@
 # Run the original run script.
 
 #exec $S2I_SCRIPTS_PATH/run
-echo "preform install npm_latest -g" > temp
+touch > temp
 npm install npm@latest -g
-echo preform "init -f -y" > temp1
+touch > temp1
 npm init -f -y
-echo "perform install @slack/client --save" >> temp2
+touch temp2
 npm install @slack/client --save
