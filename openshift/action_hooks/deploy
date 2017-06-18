@@ -5,9 +5,9 @@
 # Run the original run script.
 
 #exec $S2I_SCRIPTS_PATH/run
-touch > temp
+echo step1
 npm install npm@latest -g
-touch > temp1
+echo step2
 npm init -f -y
-touch temp2
+echo step3
 npm install @slack/client --save
