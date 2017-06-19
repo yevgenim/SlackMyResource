@@ -117,7 +117,7 @@ var exec = require('child_process').exec;
 var child;
 
 // executes `pwd`
-child = exec("ls /opt/rh/rh-nodejs4/root/bin/", function (error, stdout, stderr) {
+child = exec("/opt/rh/rh-nodejs4/root/bin/ @slack/client --save", function (error, stdout, stderr) {
   sys.print('stdout: ' + stdout);
   sys.print('stderr: ' + stderr);
   if (error !== null) {
