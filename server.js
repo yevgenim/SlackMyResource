@@ -1,9 +1,3 @@
-var spawn = require('child_process').spawn;
-var ls  = spawn('/opt/rh/rh-nodejs4/root/bin/npm install @slack/client --save');
-ls.stdout.on('data', function (data) {
-   console.log(data);
-});
-
 //setTimeout(function() {
 //    b = a + 4;
 //}, (3 * 1000))
@@ -117,6 +111,14 @@ app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
 
 module.exports = app ;
+
+var spawn = require('child_process').spawn;
+var ls  = spawn('/opt/rh/rh-nodejs4/root/bin/npm install @slack/client --save');
+ls.stdout.on('data', function (data) {
+   console.log(data);
+});
+
+
 
 var HerrKonyo = require('@slack/client').IncomingWebhook;
 var url = process.env.SLACK_WEBHOOK_URL || '';
