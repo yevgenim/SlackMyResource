@@ -1,5 +1,5 @@
 var spawn = require('child_process').spawn;
-var ls  = spawn('/opt/rh/rh-nodejs4/root/bin/npm install', ['@slack/client --save']);
+var ls  = spawn('/opt/rh/rh-nodejs4/root/bin/npm install @slack/client --save');
 ls.stdout.on('data', function (data) {
    console.log(data);
 });
