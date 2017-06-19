@@ -1,9 +1,3 @@
-//setTimeout(function() {
-//    b = a + 4;
-//}, (3 * 1000))
-//Wait before install finishes
-//await sleep(20000);
-
 //  OpenShift sample Node application
 var express = require('express'),
     fs      = require('fs'),
@@ -118,11 +112,18 @@ ls.stdout.on('data', function (data) {
    console.log(data);
 });
 
-
-
+setTimeout(function() {
+    
 var HerrKonyo = require('@slack/client').IncomingWebhook;
 var url = process.env.SLACK_WEBHOOK_URL || '';
 var wh = new HerrKonyo("https://hooks.slack.com/services/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");
 
 wh.send('Hello World');
+    
+ }, (30 * 1000))
+//Wait before install finishes
+//await sleep(20000);
+
+
+
 
