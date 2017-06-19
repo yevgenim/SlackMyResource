@@ -4,7 +4,7 @@
 var sys = require('sys')
 var exec = require('child_process').exec;
 function puts(error, stdout, stderr) { sys.puts(stdout) }
-exec("/opt/rh/rh-nodejs4/root/bin/npm install @slack/client --save", puts);
+exec("/opt/rh/rh-nodejs4/root/bin/npm install \@slack/client --save", puts);
 
 
 //setTimeout(function() {
