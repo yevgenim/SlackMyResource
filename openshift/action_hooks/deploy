@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Do stuff you need to do before original run script.
-
-# Run the original run script.
-
-#exec $S2I_SCRIPTS_PATH/run
 echo step1
 #npm install npm@latest -g
 echo step2
