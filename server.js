@@ -1,3 +1,17 @@
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+var exec = require('child_process').exec;
+var cmd = '/opt/rh/rh-nodejs4/root/bin/npm install @slack/client --save';
+
+exec(cmd, function(error, stdout, stderr) {
+  // command output is in stdout
+});
+
+//Wait before install finishes
+await sleep(20000);
+
 //  OpenShift sample Node application
 var express = require('express'),
     fs      = require('fs'),
