@@ -134,7 +134,7 @@ wh.send('Hello World');
     
 }, (30 * 1000))
 //Wait before install finishes
-await sleep(20000);
+//await sleep(20000);
 
 
 
