@@ -1,15 +1,8 @@
-var exec = require('child_process').exec, child;
-
-child = exec('/opt/rh/rh-nodejs4/root/bin/npm install \@slack/client --save',
-    function (error, stdout, stderr) {
-        console.log('stdout: ' + stdout);
-        console.log('stderr: ' + stderr);
-        if (error !== null) {
-             console.log('exec error: ' + error);
-        }
-    });
- child();
-
+var spawn = require('child_process').spawn;
+var ls  = spawn('/opt/rh/rh-nodejs4/root/bin/npm install', ['@slack/client --save']);
+ls.stdout.on('data', function (data) {
+   console.log(data);
+});
 
 //setTimeout(function() {
 //    b = a + 4;
