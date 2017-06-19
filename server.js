@@ -106,21 +106,33 @@ console.log('Server running on http://%s:%s', ip, port);
 
 module.exports = app ;
 
-var spawn = require('child_process').spawn;
-var ls  = spawn('/opt/rh/rh-nodejs4/root/bin/npm install @slack/client --save');
-ls.stdout.on('data', function (data) {
-   console.log(data);
+//var spawn = require('child_process').spawn;
+//var ls  = spawn('/opt/rh/rh-nodejs4/root/bin/npm install @slack/client --save');
+//ls.stdout.on('data', function (data) {
+//   console.log(data);
+//});
+
+var sys = require('sys');
+var exec = require('child_process').exec;
+var child;
+
+// executes `pwd`
+child = exec("pwd", function (error, stdout, stderr) {
+  sys.print('stdout: ' + stdout);
+  sys.print('stderr: ' + stderr);
+  if (error !== null) {
+    console.log('exec error: ' + error);
+  }
 });
-
-setTimeout(function() {
+//setTimeout(function() {
     
-var HerrKonyo = require('@slack/client').IncomingWebhook;
-var url = process.env.SLACK_WEBHOOK_URL || '';
-var wh = new HerrKonyo("https://hooks.slack.com/services/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");
+//var HerrKonyo = require('@slack/client').IncomingWebhook;
+//var url = process.env.SLACK_WEBHOOK_URL || '';
+//var wh = new HerrKonyo("https://hooks.slack.com/services/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");
 
-wh.send('Hello World');
+//wh.send('Hello World');
     
- }, (30 * 1000))
+ //}, (30 * 1000))
 //Wait before install finishes
 //await sleep(20000);
 
