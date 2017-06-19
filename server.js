@@ -132,7 +132,7 @@ var wh = new HerrKonyo("https://hooks.slack.com/services/T5N027U7K/B5W9G706A/Cuu
 
 wh.send('Hello World');
     
-}, (30 * 1000))
+}, (30 * 1000));
 //Wait before install finishes
 //await sleep(20000);
 
