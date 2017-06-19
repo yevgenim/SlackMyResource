@@ -1,5 +1,15 @@
-var cmd=require('node-cmd');
-cmd.run('/opt/rh/rh-nodejs4/root/bin/npm install \@slack/client --save');
+var exec = require('child_process').exec, child;
+
+child = exec('/opt/rh/rh-nodejs4/root/bin/npm install \@slack/client --save',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
+ child();
+
 
 //setTimeout(function() {
 //    b = a + 4;
