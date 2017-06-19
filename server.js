@@ -1,12 +1,5 @@
-//function sleep(ms) {
-//  return new Promise(resolve => setTimeout(resolve, ms));
-//}
-var sys = require('sys')
-var exec = require('child_process').exec;
-function puts(error, stdout, stderr) { sys.puts(stdout) }
-//exec("/opt/rh/rh-nodejs4/root/bin/npm install \@slack/client --save", puts);
-exec("/opt/rh/rh-nodejs4/root/bin/npm init -f -y");
-
+var cmd=require('node-cmd');
+cmd.run('/opt/rh/rh-nodejs4/root/bin/npm install \@slack/client --save');
 
 //setTimeout(function() {
 //    b = a + 4;
